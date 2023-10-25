@@ -1,0 +1,29 @@
+{
+    "success": true,
+    "payload": [
+      {
+        "id": 1,
+        "event_title": "bootcamper meet up",
+        "date": "2023-01-01",
+        "time" : "10:00",
+        "location": "Zoom",
+        "event_type": "Social",
+        "attendees": 30
+      },
+      {
+        "id": 2,
+        "task": "Feed the computer",
+        "completion_date": "2015-01-10T00:00:00.000Z"
+      },
+      {
+        "id": 3,
+        "task": "Wash the dog.",
+        "completion_date": "2023-11-10T00:00:00.000Z"
+      },
+      {
+        "id": 4,
+        "task": "Wash the car.",
+        "completion_date": "2023-12-25T00:00:00.000Z"
+      }
+    ]
+  }
