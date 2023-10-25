@@ -10,3 +10,14 @@ export async function getEvents(req, res) {
     payload: events,
   });
 }
+
+export async function updateEventAttendees(req, res) {
+  const id = req.params.id;
+  const updatedEvent = await eventsModel.updateEventAttendees(id);
+
+  res.json({
+    success: true,
+    payload: updatedEvent,
+  });
+
+}
