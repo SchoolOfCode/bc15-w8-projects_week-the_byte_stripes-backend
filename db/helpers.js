@@ -38,21 +38,3 @@ export async function resetAllTables(data) {
 
   return inserted.rows;
 }
-
-    //   FROM json_populate_recordset(NULL::events, $1::JSON)
-    // )
-
-  //   const inserted = await pool.query(
-  //     `INSERT INTO events (
-  //       task,
-  //       completion_date
-  //     ) (
-  //       SELECT event_title, date, time, location, event_type, attendees
-  //       FROM json_populate_recordset(NULL::events, $1::JSON)
-  //     )
-  //     RETURNING *;`,
-  //     [JSON.stringify(data)]
-  //   );
-  
-  //   return inserted.rows;
-  // }

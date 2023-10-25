@@ -6,7 +6,6 @@
     "pg": "^8.11.3"
   },
   "name": "bc15-w8-projects_week-the_byte_stripes-backend",
-  "description": "Feel free to delete this and start from scratch.",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
@@ -19,7 +18,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r dotenv/config server.js",
-    "reset-db" : "node -r dotenv/config db/scripts/reset-all-tables.js"
+    "reset-db": "node -r dotenv/config db/scripts/reset-all-tables.js"
   },
   "keywords": [],
   "author": "",
