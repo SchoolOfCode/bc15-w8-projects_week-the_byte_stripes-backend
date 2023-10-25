@@ -1,6 +1,6 @@
 import express from "express";
 import morgan from "morgan";
-// import { eventsRouter } from "./events/events.router.js";
+import { eventsRouter } from "./events/events.router.js";
 
 const app = express();
 
@@ -9,6 +9,6 @@ app.use(express.json());
     //point to the nameFolder
 // app.use(express.static("nameFolder"));
 
-// app.use("/api/events", eventsRouter);
+app.use("/events", eventsRouter);
 
 export default app;
