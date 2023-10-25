@@ -28,14 +28,13 @@ export async function resetAllTables(data) {
       event_type,
       attendees
     ) (
-      "bootcamper meet up",
-      "2023-01-01",
-      "10:00",
-      "Zoom",
-      "Social",
-      30
-      )
-;`);
+            SELECT event_title, date, time, location, event_type, attendees
+            FROM json_populate_recordset(NULL::events, $1::JSON)
+          )
+          RETURNING *;`,
+          [JSON.stringify(data)]
+        
+);
 
   return inserted.rows;
 }
@@ -44,12 +43,12 @@ export async function resetAllTables(data) {
     // )
 
   //   const inserted = await pool.query(
-  //     `INSERT INTO todos (
+  //     `INSERT INTO events (
   //       task,
   //       completion_date
   //     ) (
-  //       SELECT task, completion_date
-  //       FROM json_populate_recordset(NULL::todos, $1::JSON)
+  //       SELECT event_title, date, time, location, event_type, attendees
+  //       FROM json_populate_recordset(NULL::events, $1::JSON)
   //     )
   //     RETURNING *;`,
   //     [JSON.stringify(data)]
