@@ -42,3 +42,18 @@ export async function resetAllTables(data) {
 
     //   FROM json_populate_recordset(NULL::events, $1::JSON)
     // )
+
+  //   const inserted = await pool.query(
+  //     `INSERT INTO todos (
+  //       task,
+  //       completion_date
+  //     ) (
+  //       SELECT task, completion_date
+  //       FROM json_populate_recordset(NULL::todos, $1::JSON)
+  //     )
+  //     RETURNING *;`,
+  //     [JSON.stringify(data)]
+  //   );
+  
+  //   return inserted.rows;
+  // }
