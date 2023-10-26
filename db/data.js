@@ -1,6 +1,6 @@
 export const data = [
   {
-    event_title: "bootcamper meet up",
+    event_title: "Bootcamper Meet Up",
     date: "2023-01-01",
     time: "10:00",
     location: "Zoom",
