@@ -11,6 +11,40 @@ export async function getEvents(req, res) {
   });
 }
 
+
+export async function getSocialEvents(req, res) {
+  
+  const events = await eventsModel.getSocialEvents();
+
+
+  res.json({
+    success: true,
+    payload: events,
+  });
+}
+
+export async function getTechEvents(req, res) {
+  
+  const events = await eventsModel.getTechEvents();
+
+
+  res.json({
+    success: true,
+    payload: events,
+  });
+}
+
+export async function getOnlineEvents(req, res) {
+  
+  const events = await eventsModel.getOnlineEvents();
+
+
+  res.json({
+    success: true,
+    payload: events,
+  });
+}
+
 export async function updateEventAttendees(req, res) {
   const id = req.params.id;
   const updatedEvent = await eventsModel.updateEventAttendees(id);
