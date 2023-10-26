@@ -27,7 +27,7 @@ test("GET /events", async () => {
 
 // Testing sorting order of GET /events
 test("GET /events - sorting order", async () => {
-  // Reset database, send get request, check response body status is success and body is array
+  // Reset database, send get request, check response status is success and body is array
   await resetAllTables(data);
   const response = await supertest(app).get("/events");
   const responseBody = response.body;
